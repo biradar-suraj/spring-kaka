@@ -31,7 +31,7 @@ public class MessageController {
 
     @PostMapping("/json")
     public ResponseEntity<String> sendJsonMessage(@RequestBody Student student) {
-        kafkaJsonProducer.sendMessage(student);
+        kafkaJsonProducer.sendJsonMessage(student);
         return ResponseEntity.ok("Message queued successfully");
     }
 }
